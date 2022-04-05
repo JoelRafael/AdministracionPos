@@ -1,9 +1,12 @@
-"use estrict";
-const express = require("express");
-const Router = express.Router();
+"use strict";
+import express from "express";
+import {UsuariosController} from '../controllers/UsuariosController.js';
+export const AdministracionRouter = express.Router();
+//const UsuariosController = require('../controllers/UsuariosController')
+const Usuairo = new UsuariosController()
 
-Router.get("/administracion/roles", (req, res) => {
-  res.send("Accediendo a la ruta de roles");
-});
+AdministracionRouter
+.get("/usuarios", Usuairo.obtenerusuario)
 
-module.exports = Router;
+
+

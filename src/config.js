@@ -1,20 +1,20 @@
-require("dotenv").config();
-module.exports = {
+import 'dotenv/config';
+export const config={
+  database:"",
   Produccion: {
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
-    database: "",
+    database: "administracion",
     host: process.env.HOSTPROD,
     dialect: "mysql",
     define: {
       timestamps: false,
     },
   },
-
-  Develomenp: {
+ Develomenp: {
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
-    database: "",
+    database: "administracion",
     host: process.env.HOSTDEV,
     dialect: "mysql",
     define: {
