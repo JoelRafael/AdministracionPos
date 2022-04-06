@@ -2,9 +2,12 @@
 import {Model, DataTypes} from 'sequelize';
 import {sequelize} from '../database/conexion.js'
 
-export class UsuariosModel extends Model {}
+export default class UsuariosModel extends Model {}
 UsuariosModel.init({
-UsuarioId:DataTypes.INTEGER,
+UsuarioId:{
+    type:DataTypes.INTEGER,
+    primaryKey: true
+},
 
 RolId:DataTypes.INTEGER,
 

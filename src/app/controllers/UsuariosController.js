@@ -1,9 +1,14 @@
 'use strict'
-import {UsuariosModel} from '../models/UsuariosModel.js'
-  export class UsuariosController{
-   obtenerusuario(req, res){
-    UsuariosModel.findAll().then(usuario=>{
-    res.json(res)
-    })
-}}
-//exports = UsuariosController;
+import UsuariosServices from "../services/Usuarios.services.js"
+import ReturnMessageHelpers from "../helpers/ReturnMessage.helpers.js"
+const ServicesUsuario = new UsuariosServices();
+const messageHelpers = new ReturnMessageHelpers();
+ export class UsuariosController{
+      //Obtengo todos los usuarios
+       obtenerusuario(req, res){
+        var Usuarios = ServicesUsuario.obtenerusuarios(); 
+        Usuarios.then(usuarios=>{
+            res.json(messageHelpers.Message(200, false, "", usuarios))  
+        })
+        }
+}
