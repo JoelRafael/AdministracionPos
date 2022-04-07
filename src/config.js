@@ -1,15 +1,12 @@
 import 'dotenv/config';
-export  const NombreBaseDeDtos = {
-  bases:""
-}
 export const config={
-  database:"",
+  databases:"administracion",
   Produccion: {
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
-    database: NombreBaseDeDtos.bases,
     host: process.env.HOSTPROD,
     dialect: "mysql",
+    logging:false,
     define: {
       timestamps: false,
     },
@@ -17,9 +14,9 @@ export const config={
  Develomenp: {
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
-    database: NombreBaseDeDtos.bases,
     host: process.env.HOSTDEV,
     dialect: "mysql",
+    logging:false,
     define: {
       timestamps: false,
     },

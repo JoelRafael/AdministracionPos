@@ -1,10 +1,11 @@
 import UsuariosModel from "../models/UsuariosModel.js" 
-import {NombreBaseDeDtos, config} from "../../config.js"
+import {config} from "../../config.js"
 import {BaseDatos} from "../database/database.js"
+//import {sequelize} from "../database/conexion.js"
 export default class UsuariosServices {
 obtenerusuarios(){  
-NombreBaseDeDtos.bases=BaseDatos.Administracion;
-console.log(config.Develomenp)
+config.databases=BaseDatos.Administracion;
+//console.log(config)
 return  UsuariosModel.findAll()
 }
 
