@@ -1,5 +1,5 @@
 import 'dotenv/config';
-export const config={
+export var config={
   databases:"administracion",
   Produccion: {
     username: process.env.USERNAME,
