@@ -1,22 +1,22 @@
-import 'dotenv/config';
-export var config={
-  databases:"administracion",
+import "dotenv/config";
+export var config = {
+  databases: "administracion",
   Produccion: {
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
     host: process.env.HOSTPROD,
     dialect: "mysql",
-    logging:false,
+    logging: false,
     define: {
       timestamps: false,
     },
   },
- Develomenp: {
-    username: process.env.USERNAME,
-    password: process.env.PASSWORD,
-    host: process.env.HOSTDEV,
+  Develomenp: {
+    username: "jparedes",
+    password: "jparedes",
+    host: "localhost",
     dialect: "mysql",
-    logging:false,
+    logging: false,
     define: {
       timestamps: false,
     },
